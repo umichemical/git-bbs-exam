@@ -1,23 +1,26 @@
-package com.example;
+package com.example.domain;
+
+import java.util.List;
+
 
 /**
- * 投稿コメントのドメイン
+ * 投稿記事のドメイン
  * @author yuri.okada
  *
  */
-public class Comment {
-	
+public class Article {
+
 	/** ID */
 	private Integer id;
 
-	/** コメント者名 */
+	/** 投稿者名 */
 	private String name;
 
-	/** コメント内容 */
+	/** 投稿内容 */
 	private String content;
 
-	/** 投稿ID */
-	private Integer articleId;
+	/** コメント内容 */
+	private List<Comment> commentList;
 
 	public Integer getId() {
 		return id;
@@ -43,18 +46,18 @@ public class Comment {
 		this.content = content;
 	}
 
-	public Integer getArticleId() {
-		return articleId;
+	public List<Comment> getCommentList() {
+		return commentList;
 	}
 
-	public void setArticleId(Integer articleId) {
-		this.articleId = articleId;
+	public void setCommentList(List<Comment> commentList) {
+		this.commentList = commentList;
 	}
 
 	@Override
 	public String toString() {
-		return "Comment [id=" + id + ", name=" + name + ", content=" + content + ", articleId=" + articleId + "]";
+		return "Article [id=" + id + ", name=" + name + ", content=" + content + ", commentList=" + commentList + "]";
 	}
 
-
+	
 }
