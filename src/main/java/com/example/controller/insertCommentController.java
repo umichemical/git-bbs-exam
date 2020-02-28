@@ -36,8 +36,6 @@ public class insertCommentController {
 		comment.setArticleId(commentForm.getIntArticleId());
 		commentRepository.insert(comment);
 
-//		redirectAttributes.addFlashAttribute("comment", comment);
-
 		return "redirect:/bbs";
 
 	}
