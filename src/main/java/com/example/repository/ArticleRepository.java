@@ -1,6 +1,5 @@
 package com.example.repository;
 
-
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,7 +31,6 @@ public class ArticleRepository {
 		return article;
 	};
 
-
 	/**
 	 * 全件検索るメソッド.
 	 * 
@@ -43,7 +41,6 @@ public class ArticleRepository {
 		List<Article> articleList = template.query(sql, ARTICLE_ROW_MAPPER_);
 		return articleList;
 	}
-	
 
 	/**
 	 * 新たに記事を投稿するメソッド.
